@@ -1,0 +1,7 @@
+D:\Assignment\C# Code Based Test\Csharp_Test_1\Csharp_Test_1\obj\Debug\Csharp_Test_1.csproj.AssemblyReference.cache
+D:\Assignment\C# Code Based Test\Csharp_Test_1\Csharp_Test_1\obj\Debug\Csharp_Test_1.csproj.CoreCompileInputs.cache
+D:\Assignment\C# Code Based Test\Csharp_Test_1\Csharp_Test_1\bin\Debug\Csharp_Test_1.exe.config
+D:\Assignment\C# Code Based Test\Csharp_Test_1\Csharp_Test_1\bin\Debug\Csharp_Test_1.exe
+D:\Assignment\C# Code Based Test\Csharp_Test_1\Csharp_Test_1\bin\Debug\Csharp_Test_1.pdb
+D:\Assignment\C# Code Based Test\Csharp_Test_1\Csharp_Test_1\obj\Debug\Csharp_Test_1.exe
+D:\Assignment\C# Code Based Test\Csharp_Test_1\Csharp_Test_1\obj\Debug\Csharp_Test_1.pdb

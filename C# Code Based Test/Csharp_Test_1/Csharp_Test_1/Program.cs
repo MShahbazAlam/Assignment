@@ -10,10 +10,14 @@ namespace Csharp_Test_1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(".............Solution of Question-1.............. ");
+
             Console.WriteLine(RemoveCharacter("Python", 1));
             Console.WriteLine(RemoveCharacter("Python", 0));
             Console.WriteLine(RemoveCharacter("Python", 4));
             Console.WriteLine(".....................................");
+
+            Console.WriteLine(".............Solution of Question-2..............");
 
             Console.Write("Enter the number of which Table you want: ");
             int number = Convert.ToInt32(Console.ReadLine());
@@ -25,7 +29,7 @@ namespace Csharp_Test_1
 
         public static string RemoveCharacter(string input, int position)
         {
-            Console.WriteLine(".............Solution of Question-1.............. ");
+            
             if (position < 0 || position >= input.Length)
             {
                 // If the position is not in range, return the original .
@@ -40,7 +44,7 @@ namespace Csharp_Test_1
 
         public static void Multiplication(int number)
         {
-            Console.WriteLine(".............Solution of Question-2..............");
+           
             Console.WriteLine($"Multiplication Table for {number}:");
 
             for (int i = 0; i <= 10; i++)

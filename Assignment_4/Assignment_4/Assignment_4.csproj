@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1A57F197-E44D-42DD-84C6-DC923E9A6DFC}</ProjectGuid>
+    <ProjectGuid>{26BF4EEF-7A80-447B-B1F6-8D6FC3863F87}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Assignment_4</RootNamespace>
     <AssemblyName>Assignment_4</AssemblyName>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Student</StartupObject>
+    <StartupObject>Assignment_4.Student</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -15,6 +15,7 @@ namespace Csharp_Test_1
             Console.WriteLine(RemoveCharacter("Python", 1));
             Console.WriteLine(RemoveCharacter("Python", 0));
             Console.WriteLine(RemoveCharacter("Python", 4));
+
             Console.WriteLine(".....................................");
 
             Console.WriteLine(".............Solution of Question-2..............");

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B4A5C28-A2D4-4594-B174-E1CD6054F197}</ProjectGuid>
+    <ProjectGuid>{7654F563-E31B-4E1E-8E6E-3BF629EF21E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Case_Study_2</RootNamespace>
     <AssemblyName>Case_Study_2</AssemblyName>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Case_Study_2.App</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Case_Study_1\Case_Study_1\Case_Study_1.csproj">
-      <Project>{f13fade8-4535-4cb9-91fe-11e0a3242014}</Project>
+      <Project>{b2a1c46f-ae9a-46ee-99dc-7c68e697970d}</Project>
       <Name>Case_Study_1</Name>
     </ProjectReference>
   </ItemGroup>

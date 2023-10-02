@@ -44,6 +44,7 @@ namespace Case_Study_1
                 Console.WriteLine("2. Scenario 2");
                 Console.WriteLine("3. Exit");
                 Console.Write("Enter your choice (1-3): ");
+               
 
                 if (int.TryParse(Console.ReadLine(), out int choice))
                 {
@@ -61,7 +62,8 @@ namespace Case_Study_1
                             break;
                         default:
                             Console.WriteLine("Invalid choice. Please select a valid scenario (1-3).");
-                            break;
+                            
+                        break;
                     }
                 }
                 else
@@ -69,7 +71,7 @@ namespace Case_Study_1
                     Console.WriteLine("Invalid input. Please enter a numeric choice.");
                 }
             }
-            
+
         }
 
        
@@ -78,9 +80,10 @@ namespace Case_Study_1
             Info info = new Info();
 
             Console.WriteLine("Scenario 1 - Create Student Objects and Display Details");
-            Console.WriteLine("Enter the number of students you want to create: ");
+            Console.Write("Enter the number of students you want to create: ");
+             int numStudents = int.Parse(Console.ReadLine());
 
-            if (int.TryParse(Console.ReadLine(), out int numStudents) && numStudents > 0)
+            if ( numStudents > 0)
             {
                 for (int i = 1; i <= numStudents; i++)
                 {

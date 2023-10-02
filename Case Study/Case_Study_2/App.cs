@@ -114,9 +114,11 @@ namespace Case_Study_2
                             Console.WriteLine("1. Scenario 1 (CaseStudy1)");
                             Console.WriteLine("2. Scenario 2 (CaseStudy1)");
                             Console.Write("Enter your choice (1-2): ");
-                           int scenarioChoice = int.Parse(Console.ReadLine());
+                            //int scenarioChoice = int.Parse(Console.ReadLine());
+                            if (int.TryParse(Console.ReadLine(), out int scenarioChoice))
+                            {
 
-                               if (scenarioChoice == 1 || scenarioChoice == 2)
+                                if (scenarioChoice == 1 || scenarioChoice == 2)
                                 {
                                     // Register the student using Scenario 1 or 2 from CaseStudy1
                                     if (scenarioChoice == 1)
@@ -130,10 +132,16 @@ namespace Case_Study_2
                                         Console.WriteLine("Student registered successfully using Scenario 2.");
                                     }
                                 }
-                            
+
+
+                                else
+                                {
+                                    Console.WriteLine("Please select a valid scenario (1-2).");
+                                }
+                            }
                             else
                             {
-                                Console.WriteLine("Invalid input, Please enter a numeric choice or Please select a valid scenario (1-2).");
+                                Console.WriteLine("Invalid input, Please enter a numeric choice ");
                             }
                             break;
 

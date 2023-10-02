@@ -4,21 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Case_Study_2;
-using Case_Study_1;// Reference the classes from CaseStudy2 namespace
+using Case_Study_1;
 
 namespace Case_Study_3
 {
-    //public interface IUserInterface
-    //{
-    //    void ShowFirstScreen();
-    //    void ShowStudentScreen();
-    //    void ShowAdminScreen();
-    //    void ShowAllStudentsScreen();
-    //    void ShowStudentRegistrationScreen();
-    //    void IntroduceNewCourseScreen();
-    //    void ShowAllCoursesScreen();
-    //}
-
     public class UserInterface : IUserInterface
     {
         private AppEngine appEngine = new AppEngine();
@@ -28,9 +17,9 @@ namespace Case_Study_3
             Console.WriteLine("Welcome to SMS (Student Mgmt. System) v1.0");
             Console.WriteLine("Tell us who you are : \n1. Student\n2. Admin\n3. Exit");
             Console.Write("Enter your choice (1, 2, or 3): ");
-            int op = Convert.ToInt32(Console.ReadLine());
+            int opt = Convert.ToInt32(Console.ReadLine());
 
-            switch (op)
+            switch (opt)
             {
                 case 1:
                     ShowStudentScreen();

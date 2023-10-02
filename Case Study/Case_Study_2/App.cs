@@ -1,5 +1,5 @@
 ﻿using System;
-using Case_Study_1; // Reference the Student class from CaseStudy1 namespace
+using Case_Study_1; 
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,16 +50,7 @@ namespace Case_Study_2
         public void Register(Student student)
         {
             students.Add(student);
-            //try
-            //{
-            //    students.Add(student);
-            //    Console.WriteLine($"Student registered: ID {student.Id}, Name {student.Name}");
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine($"Error registering student: {ex.Message}");
-            //}
-        }
+                  }
 
         public Student[] ListOfStudents()
         {
@@ -123,10 +114,9 @@ namespace Case_Study_2
                             Console.WriteLine("1. Scenario 1 (CaseStudy1)");
                             Console.WriteLine("2. Scenario 2 (CaseStudy1)");
                             Console.Write("Enter your choice (1-2): ");
+                           int scenarioChoice = int.Parse(Console.ReadLine());
 
-                            if (int.TryParse(Console.ReadLine(), out int scenarioChoice))
-                            {
-                                if (scenarioChoice == 1 || scenarioChoice == 2)
+                               if (scenarioChoice == 1 || scenarioChoice == 2)
                                 {
                                     // Register the student using Scenario 1 or 2 from CaseStudy1
                                     if (scenarioChoice == 1)
@@ -140,14 +130,10 @@ namespace Case_Study_2
                                         Console.WriteLine("Student registered successfully using Scenario 2.");
                                     }
                                 }
-                                else
-                                {
-                                    Console.WriteLine("Invalid choice. Please select a valid scenario (1-2).");
-                                }
-                            }
+                            
                             else
                             {
-                                Console.WriteLine("Invalid input. Please enter a numeric choice.");
+                                Console.WriteLine("Invalid input, Please enter a numeric choice or Please select a valid scenario (1-2).");
                             }
                             break;
 

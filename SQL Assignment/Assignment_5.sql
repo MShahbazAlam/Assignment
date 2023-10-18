@@ -1,44 +1,50 @@
-create database Assignment_5
+use Assignment_2
 
-use Assignment_5
-
+-- Creating procedure
 create procedure Payslip
-    @EmployeeID int,
-    @Salary decimal(10, 2)
+@EmployeeID int
 as
 begin
-declare @HRA decimal(10, 2)
-declare @DA decimal(10, 2)
-declare @PF decimal(10, 2)
-declare @IT decimal(10, 2)
-declare @Deductions decimal(10, 2)
-declare @GrossSalary decimal(10, 2)
-declare @NetSalary decimal(10, 2)
+    declare @EmployeeName varchar(255);
+    declare @Sal int
+    declare @HRA int
+    declare @DA int
+    declare @PF int
+    declare @IT int
+    declare @Deductions int
+    declare @GrossSalary int
+    declare @NetSalary int
 
--- Calculate HRA, DA, PF, and IT
-set @HRA = 0.10 * @Salary
-set @DA = 0.20 * @Salary
-set @PF = 0.08 * @Salary
-set @IT = 0.05 * @Salary
+-- fetching employee details
+select @EmployeeName = Ename, @Sal = Sal
+from EMP
+where EmpNo = @EmployeeID
+
+-- Calculate HRA, DA, PF, IT
+set @HRA = @Sal * 0.10
+set @DA = @Sal * 0.20
+set @PF = @Sal * 0.08;
+set @IT = @Sal * 0.05
 
 -- Calculate Deductions
 set @Deductions = @PF + @IT
 
 -- Calculate Gross Salary
-set @GrossSalary = @Salary + @HRA + @DA
+set @GrossSalary = @Sal + @HRA + @DA
 
 -- Calculate Net Salary
 set @NetSalary = @GrossSalary - @Deductions
 
--- Display the payslip
-select 'Employee ID: ' + cast(@EmployeeID as varchar(10)) as 'Payslip',
-'Basic Salary: ' + cast(@Salary as varchar(10)) as ' ',
-'HRA: ' + cast(@HRA as varchar(10)) as' ',
-'DA: ' + cast(@DA as varchar(10)) as ' ',
-'PF: ' + cast(@PF as varchar(10)) as ' ',
-'IT: ' + cast(@IT as varchar(10)) as ' ',
-'Deductions: ' + cast(@Deductions as varchar(10)) as ' ',
-'Gross Salary: ' + cast(@GrossSalary as varchar(10)) as' ',
-'Net Salary: ' + cast(@NetSalary as varchar(10)) as ' '
+-- Print the payslip
+print 'Employee Name: ' + @EmployeeName
+print 'Salary: ' + cast (@Sal as varchar (255))
+print 'HRA: ' + cast (@HRA as varchar (255))
+print 'DA: ' + cast (@DA as varchar (255))
+print 'PF: ' + cast (@PF as varchar (255))
+print 'IT: ' + cast (@IT as varchar (255))
+print 'Deductions: ' + cast (@Deductions as varchar (255))
+print 'Gross Salary: ' + cast (@GrossSalary as varchar (255))
+print 'Net Salary: ' + cast (@NetSalary as varchar (255))
 end
-exec Payslip @EmployeeID = 1, @Salary = 45000.00
+-- Execute the procedure to generate a payslip for employee with EmpNo 7369
+exec Payslip @EmployeeID = 7369

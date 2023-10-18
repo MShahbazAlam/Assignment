@@ -5,7 +5,7 @@ create procedure Payslip
 @EmployeeID int
 as
 begin
-    declare @EmployeeName varchar(255);
+    declare @EmployeeName varchar(255)
     declare @Sal int
     declare @HRA int
     declare @DA int
@@ -23,7 +23,7 @@ where EmpNo = @EmployeeID
 -- Calculate HRA, DA, PF, IT
 set @HRA = @Sal * 0.10
 set @DA = @Sal * 0.20
-set @PF = @Sal * 0.08;
+set @PF = @Sal * 0.08
 set @IT = @Sal * 0.05
 
 -- Calculate Deductions

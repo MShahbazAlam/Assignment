@@ -21,7 +21,7 @@ namespace Code_Challenge_6
         }
         static void Main(string[] args)
         {
-            AddEmployee();
+            //AddEmployee();
             DisplayAllEmployees();
             Console.Read();
         }

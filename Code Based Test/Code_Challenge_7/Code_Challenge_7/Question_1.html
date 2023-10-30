@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Multiplication and Division Calculator</title>
+
+    <script>
+        function Multiply()
+        {
+            // input values
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            // Perform multiplication
+            var multiplicationResult = num1 * num2;
+            // results
+            document.getElementById("result").textContent = "Multiplication Result: " + multiplicationResult;
+            
+        }
+        function divide()
+        {
+            // input values
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);               
+            var divisionResult = num1 / num2;
+            //results
+            document.getElementById("result").textContent = "\nDivision Result: " + divisionResult;
+            
+        }
+     </script>
+   
+    
+</head>
+<body>
+    <h2>Enter numbers to perform multiplication and division:</h2>
+
+    <label for="num1">Enter the first number: </label>
+    <input type="number" id="num1" placeholder="Enter the first number"><br><br/>
+
+    <label for="num2">Enter the second number: </label>
+    <input type="number" id="num2" placeholder="Enter the second number"><br><br />
+
+    <button onclick="Multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <p id="result"></p>
+</body>
+</html>

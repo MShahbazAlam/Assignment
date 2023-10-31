@@ -14,9 +14,10 @@
      <div>
 <label for="name">Name:</label>
 <asp:TextBox ID="txtName" runat="server" placeholder="Enter your name"></asp:TextBox>
-<asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" InitialValue=""
+<asp:RequiredFieldValidator ID="Name" runat="server" ControlToValidate="txtName" InitialValue=""
         Text="* Name is required" ForeColor="Red" Display="Dynamic" />
 </div>
+        <div>
             <label for="familyName">Family Name:</label>
             <asp:TextBox ID="txtFamilyName" runat="server" placeholder="Enter your family name (different from name)"></asp:TextBox>
             <asp:RequiredFieldValidator ID="FamilyName" runat="server" ControlToValidate="txtFamilyName" InitialValue="" Text="* Family Name is required" ForeColor="Red" Display="Dynamic" />

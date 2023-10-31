@@ -13,7 +13,7 @@ namespace Case_Study_MiniProject
         static SqlConnection connection;
         public AppEngine()
         {
-            connection = new SqlConnection("Data Source=ICS-LT-8ZLV6D3; Initial Catalog=Code_Challenge_6;Integrated Security = True;") ;
+            connection = new SqlConnection("Data Source=ICS-LT-8ZLV6D3; Initial Catalog=Student_Management;Integrated Security = True;") ;
             try
             {
                 connection.Open();
@@ -30,7 +30,7 @@ namespace Case_Study_MiniProject
 
             try
             {
-                string query = "Select StudentId, StudentName, DateOfBirth FROM Students";
+                string query = "Select StudentId, StudentName, DateOfBirth from Student";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -184,9 +184,6 @@ namespace Case_Study_MiniProject
             return enrollments;
         }
 
-
-
-
         public Student GetStudentById(int studentId)
         {
             try
@@ -221,8 +218,6 @@ namespace Case_Study_MiniProject
                 return null;
             }
         }
-
-
         public Course GetCourseById(int courseId)
         {
             try
@@ -256,8 +251,6 @@ namespace Case_Study_MiniProject
                 return null;
             }
         }
-
-
         public void CloseConnection()
         {
             if (connection.State == ConnectionState.Open)

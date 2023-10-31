@@ -5,3 +5,10 @@ D:\Training\Case_Study_MiniProject\Case_Study_MiniProject\bin\Debug\Case_Study_M
 D:\Training\Case_Study_MiniProject\Case_Study_MiniProject\bin\Debug\Case_Study_MiniProject.pdb
 D:\Training\Case_Study_MiniProject\Case_Study_MiniProject\obj\Debug\Case_Study_MiniProject.exe
 D:\Training\Case_Study_MiniProject\Case_Study_MiniProject\obj\Debug\Case_Study_MiniProject.pdb
+D:\Training\CaseStudy_Miniproject\Case_Study_MiniProject\Case_Study_MiniProject\bin\Debug\Case_Study_MiniProject.exe.config
+D:\Training\CaseStudy_Miniproject\Case_Study_MiniProject\Case_Study_MiniProject\bin\Debug\Case_Study_MiniProject.exe
+D:\Training\CaseStudy_Miniproject\Case_Study_MiniProject\Case_Study_MiniProject\bin\Debug\Case_Study_MiniProject.pdb
+D:\Training\CaseStudy_Miniproject\Case_Study_MiniProject\Case_Study_MiniProject\obj\Debug\Case_Study_MiniProject.csproj.AssemblyReference.cache
+D:\Training\CaseStudy_Miniproject\Case_Study_MiniProject\Case_Study_MiniProject\obj\Debug\Case_Study_MiniProject.csproj.CoreCompileInputs.cache
+D:\Training\CaseStudy_Miniproject\Case_Study_MiniProject\Case_Study_MiniProject\obj\Debug\Case_Study_MiniProject.exe
+D:\Training\CaseStudy_Miniproject\Case_Study_MiniProject\Case_Study_MiniProject\obj\Debug\Case_Study_MiniProject.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Case_Study_MiniProject
 {
-    class Student
+   public class Student
     {
         public int StudentId { get; set; }
         public string StudentName { get; set; }

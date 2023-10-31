@@ -13,31 +13,28 @@ namespace Assignment_1
         {
             if (!IsPostBack)
             {
-                //dropdown list with items
-                ddlItems.Items.Add(new ListItem("Ferrari Monza", "Ferrari Monza.png"));
-                ddlItems.Items.Add(new ListItem("Jaguar", "jaguar.png"));
-                ddlItems.Items.Add(new ListItem("Lamborghini Huracan STO", "Lamborghini Huracan STO.png"));
-                ddlItems.Items.Add(new ListItem("Lotus Evija", "Lotus Evija.png"));
-                ddlItems.Items.Add(new ListItem("Maserati MC20", "Maserati MC20.png"));
+                //Dropdown list with Car name
+                Items.Items.Add(new ListItem("Select Car", ""));
+                Items.Items.Add(new ListItem("Ferrari Monza", "Ferrari Monza.png"));
+                Items.Items.Add(new ListItem("Jaguar", "jaguar.png"));
+                Items.Items.Add(new ListItem("Lamborghini Huracan STO", "Lamborghini Huracan STO.png"));
+                Items.Items.Add(new ListItem("Lotus Evija", "Lotus Evija.png"));
+                Items.Items.Add(new ListItem("Maserati MC20", "Maserati MC20.png"));
             }
         }
-        protected void ddlItems_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Items_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //image based on the selected item
-            string selectedImageUrl = ddlItems.SelectedItem.Value;
+            //Image URL of the selected Car
+            string selectedImageUrl = Items.SelectedItem.Value;
             imgItem.ImageUrl = $"Image/{selectedImageUrl}";
-        }
 
-        protected void btnShowCost_Click(object sender, EventArgs e)
-        {
-            //cost of the selected item 
-            string selectedItem = ddlItems.SelectedItem.Text;
+            //Cost of the selected Car
+            string selectedItem = Items.SelectedItem.Text;
             string cost = GetItemCost(selectedItem);
 
-            lblCost.Text = $"Cost of {selectedItem}: {cost}";
+            //Cost Of Car
+            Cost.Text = $"Cost of {selectedItem}: {cost}";
         }
-
-        
         private string GetItemCost(string item)
         {
             switch (item)

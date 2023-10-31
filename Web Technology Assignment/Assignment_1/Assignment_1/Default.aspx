@@ -9,18 +9,17 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1 style="color:blue"><strong>Collections Of Automobile</strong></h1>
-             <h2>Select a car to Check Image and Price</h2>
-            <asp:DropDownList ID="ddlItems" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlItems_SelectedIndexChanged">
+            <h1 style="color: blue"><strong>Collections Of Automobile</strong></h1>
+            <h2>Select a car to Check Image and Price</h2>
+            <asp:DropDownList ID="Items" runat="server" AutoPostBack="true" OnSelectedIndexChanged="Items_SelectedIndexChanged">
             </asp:DropDownList>
+            <br />
+            <br />
+            <asp:Label ID="Cost" runat="server"></asp:Label>
             <br />
             <br />
             <asp:Image ID="imgItem" runat="server" />
             <br />
-            <br />
-            <asp:Label ID="lblCost" runat="server"></asp:Label>
-            <br />
-            <asp:Button ID="btnShowCost" runat="server" Text="Show Cost" OnClick="btnShowCost_Click" />
         </div>
     </form>
 </body>

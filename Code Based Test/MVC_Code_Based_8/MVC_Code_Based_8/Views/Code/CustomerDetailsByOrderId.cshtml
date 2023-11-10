@@ -1,0 +1,19 @@
+﻿@model MVC_Code_Based_8.Models.Customer
+@{
+    ViewBag.Title = "CustomerDetailsByOrderId";
+}
+
+<h2>CustomerDetailsByOrderId</h2>
+
+<table class="table">
+    <tr>
+        <th>Customer ID</th>
+        <th>Company Name</th>
+        
+    </tr>
+    <tr>
+        <td>@Model.CustomerID</td>
+        <td>@Model.CompanyName</td>
+       
+    </tr>
+</table>

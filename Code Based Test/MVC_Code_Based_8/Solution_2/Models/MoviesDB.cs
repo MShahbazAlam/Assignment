@@ -9,14 +9,10 @@ namespace Solution_2.Models
 {
     public class MoviesDB : DbContext
     {
-        //    public DbSet<Movies> Movie { get; set; }
-
-        public DbSet<Movies> Movie { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+         public MoviesDB() :base("MoviesDB")
         {
-            modelBuilder.Entity<Movies>().HasKey(m => m.Mid);
-            base.OnModelCreating(modelBuilder);
+
         }
+        public DbSet<Movies> Movie { get; set; }
     }
 }

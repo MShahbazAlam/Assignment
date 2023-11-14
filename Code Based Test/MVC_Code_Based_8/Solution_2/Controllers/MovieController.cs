@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Solution_2.Models;
 using System.Data.Entity;
-
+using System.Net;
 
 namespace Solution_2.Controllers
 {
@@ -15,9 +15,34 @@ namespace Solution_2.Controllers
         // GET: Movie
         public ActionResult Index()
         {
+            return View(dbContext.Movie.ToList());
+        }
+
+        // Details of Movie
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var movie = dbContext.Movie.Find(id);
+
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(movie);
+        }
+
+
+        // Create a new movie
+        public ActionResult Create()
+        {
             return View();
         }
-        // Create a new movie
+        [HttpPost]
         public ActionResult Create(Movies movie)
         {
             dbContext.Movie.Add(movie);
@@ -26,9 +51,10 @@ namespace Solution_2.Controllers
         }
 
         // Edit an existing movie
+        
         public ActionResult Edit(int id)
         {
-            var movie = dbContext.Movie.Find(id);
+            var movie = dbContext.Movie.Find( id);
             return View(movie);
         }
 
@@ -41,6 +67,11 @@ namespace Solution_2.Controllers
         }
 
         // Delete a movie
+        public ActionResult Delete()
+        {
+            return View();
+        }
+        [HttpPost]
         public ActionResult Delete(int id)
         {
             var movie = dbContext.Movie.Find(id);
